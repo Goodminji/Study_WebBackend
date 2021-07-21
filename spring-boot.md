@@ -2,9 +2,12 @@
 
 1.     스프링 부트 의 장점
 
--      Auto configuration
+*   Packaging Executable Jar
+* 테스트 환경과 내장 tomcat
+* start 를 제공. 
+* Auto configuration
 
--      Packaging Executable Jar
+  스타터를 이용해 라이브러리의 의존성 버전을 권장버전으로 자동 설정 
 
 2.     기본적으로 Spring boot dependency 부모로 상속하여 사용.
 
