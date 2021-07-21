@@ -13,7 +13,9 @@
 
           -&gt; @Bean 빈 등록
 
-        @ComponentScan
+        @ComponentScan\( 자동으로 빈을 등록해주는 어노테이\)
+
+* @Component,@Controller,@Configuration,@Repository,@Service 를 빈으로 등록.
 
 4. 싱글톤
 
