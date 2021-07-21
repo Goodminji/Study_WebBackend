@@ -1,4 +1,4 @@
-# 빌더패턴
+# Builder patten
 
 빌더 패턴의 장점
 

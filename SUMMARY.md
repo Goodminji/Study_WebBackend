@@ -9,5 +9,5 @@
 * [Spring boot](spring-boot.md)
 * [Spring batch](spring-batch.md)
 * [Mock test](mock-test.md)
-* [빌더패턴](undefined.md)
+* [Builder patten](builder-patten.md)
 
