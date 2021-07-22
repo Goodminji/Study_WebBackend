@@ -13,4 +13,5 @@
 * [3-Tier 아키텍처](3-tier.md)
 * [Session](session.md)
 * [Spring Security](spring-security.md)
+* [ThreadLocal](threadlocal.md)
 
