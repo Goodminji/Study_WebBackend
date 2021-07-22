@@ -3,6 +3,15 @@
   
 1. SecurityContext : 접근 주체와 인증정보를 담고있는 Context,,, securityContextholer 를통해 접근. securityContextholer 는 어디서든지 불러서 사용할 수 있는데 ThreadLocal에 보관 \(threadLocal 이란 해당 스레드에 고유 저장 영역, 해당 스레드를 실행하면 언제든지 사용 가능한 공간\)
 
+ Authtication
+
+* 구조\(속성\)
+  * principal : 사용자 아이디 혹은 User 객체를 저장
+  * credentials: 사용자 비밀번호
+  * authorities: 인증된 사용자의 권한 목록
+  * details: 인증 부가 정보
+  * Authenticated: 인증여부
+
 2.  주요 필터
 
 * SecurityContextPersistenceFilter : SecurityContextRepository 에서 SecurityContext 를 로딩하거나 SecurityContextRepository 로 SecurityContext 를 저장하는 역할을 한다.
