@@ -41,7 +41,7 @@
  public AccessDecisionManager accessDecisionManager() {
     List<AccessDecisionVoter<?>> decisionVoters = new ArrayList<>();
     decisionVoters.add(new WebExpressionVoter());
-    // voter 목록여러개 입력 가능 
+    // voter 목록여러개 입력 가
     decisionVoters.add(!_!);
     // 모든 voter 승인해야 해야함
     return new UnanimousBased(decisionVoters);
