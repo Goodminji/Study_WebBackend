@@ -56,7 +56,11 @@ public class WebMvcConfigure implements WebMvcConfigurer {
 }
 ```
 
-* Controller 에서 Pageble 사용 하면 기본적인 셋팅 안해HandlerMethodArgumentResolver 타므로 기본정보 셋
+
+
+* - controller에서 parameter가 Pageable 타입이면 해당 작업을 수행할 것이며, 
+
+  - 요청 URL의 parameter로 들어온 offset과 limit의 값을 적절하게 조작하고, PageRequest 객체를 리턴한다  
 
 ```text
   @GetMapping(path = "user/{userId}/post/list")
@@ -76,4 +80,6 @@ public class WebMvcConfigure implements WebMvcConfigurer {
 ```
 
 출처 : [https://jhkang-tech.tistory.com/49](https://jhkang-tech.tistory.com/49)
+
+[https://starkying.tistory.com/entry/Spring-MVC-%E2%80%94-HandlerMethodArgumentResolver-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0](https://starkying.tistory.com/entry/Spring-MVC-%E2%80%94-HandlerMethodArgumentResolver-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)
 
