@@ -42,15 +42,11 @@ public class PageableMethodArgumentResolver implements HandlerMethodArgumentReso
 @Configuration
 public class WebMvcConfigure implements WebMvcConfigurer {
 
-  // TODO offset,limit를 Query Parameter로 받아 Pageable 구현체를 생성해주는 HandlerMethodArgumentResolver 인터페이스 구현체를 com.github.prgrms.social.configure.support 패키지 아래에 구현하고 아래에서 설정
-  private final String baseApiPath = "api";
-
-  private final long defalut_offset = 0;
-  private final int max_limit = 5;
-
+  // TODO offset,limit를 Query Parameter로 받아 Pageable 구현체를 생성해주는 HandlerMethodArgumentResolver 인터페이스 구현체 설
+  
   @Override
   public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
-	  argumentResolvers.add(new PageableMethodArgumentResolver(new PageableRequest(defalut_offset,max_limit)));
+	  argumentResolvers.add(new PageableMethodArgumentResolver(new PageableRequest()));
   }
   ........
 }
