@@ -82,5 +82,7 @@ public class UserDto {
 
 
 
-[https://yookeun.github.io/java/2017/02/26/java-swagger/](https://yookeun.github.io/java/2017/02/26/java-swagger/)
+{% embed url="https://yookeun.github.io/java/2017/02/26/java-swagger/" %}
+
+
 
