@@ -39,7 +39,7 @@ cloud:
       auto: false
 ```
 
-* bean 설
+* bean 설명 
 
 ```text
   @Bean
@@ -57,7 +57,7 @@ cloud:
   }
 ```
 
-* controller 작
+* controller 작성 
 
 ```text
 @PostMapping(path = "user/join", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
@@ -68,8 +68,45 @@ cloud:
 	  
 	   .....
 	   s3Service.upload(file);
+	  //s3Client.upload 메소드는 null을 반환하지 않음
   }  
 ```
 
-[https://docs.aws.amazon.com/ko\_kr/AmazonS3/latest/userguide/Welcome.html\#CoreConcepts](https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/Welcome.html#CoreConcepts)
+* 객체 업로드 : S3 버킷 이름, 오브젝트 키 이, 파일 \( byte\) 필요  PutObjectRequest 객체를 이용하여 업로
+
+```text
+ public String upload(File file) {
+    PutObjectRequest request = new PutObjectRequest(bucketName, file.getName(), file);
+    return executePut(request);
+  }
+  
+  private String executePut(PutObjectRequest request) {
+    amazonS3.putObject(request.withCannedAcl(CannedAccessControlList.PublicRead));
+    StringBuilder sb = new StringBuilder(url);
+    if (!url.endsWith("/"))
+      sb.append("/");
+    sb.append(bucketName);
+    sb.append("/");
+    sb.append(request.getKey());
+    return sb.toString();
+  }
+```
+
+* 객체 업로 조회 : S3 버킷 이름과 오브젝트 키 필요 
+
+```text
+1. amazonS3.getObject(request) 사용하여 조회 
+2. https://doc.s3.amazonaws.com/2006-03-01/AmazonS3.wsdl이라는 
+  URL에서 “doc”는 버킷의 이름이고 “2006-03-01/AmazonS3.wsdl”은 키로 조회 
+```
+
+{% embed url="https://docs.aws.amazon.com/ko\_kr/AmazonS3/latest/userguide/Welcome.html\#CoreConcepts" %}
+
+
+
+{% embed url="https://victorydntmd.tistory.com/334" %}
+
+{% embed url="https://devlog-wjdrbs96.tistory.com/323" %}
+
+
 
