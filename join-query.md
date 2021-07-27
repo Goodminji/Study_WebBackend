@@ -11,7 +11,7 @@ select a
       //스칼라 서브쿼리 
       ,(select d from tableB where tableA.a = tableB.a) as d 
 from tableA 
-     , (select a,b,c from tableC) tableC //인라인  
+     , (select a,b,c from tableC) tableC //인라인 뷰  
 ```
 
 
