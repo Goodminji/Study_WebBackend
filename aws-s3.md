@@ -9,104 +9,20 @@
 * Keys - 키는 버킷 내 객체의 고유한 식별자
 * Regions - 객체가 저장되는 물리적 위치이며 리전간 객체 공유 불가. 지연 시간 최적화, 비용 최소화, 규정 요구 사항 준수 등 다양한 필요에 따라 리전을 선택  
 *  `https://doc.s3.amazonaws.com/2006-03-01/AmazonS3.wsdl`이라는 URL에서 “`doc`”는 버킷의 이름이고 “`2006-03-01/AmazonS3.wsdl`”은 키
-* AWS S3연동은 Network I/O Bound 처리 이기 때문에 언제든 예외가 발생할 수 있음을 고려 해야 한다. 
 
 2. AWS 사용
 
-* pom.xml 등록 
+* pom.xml 등
 
 ```text
   <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-s3</artifactId>
-      <version>1.11.1007</version>
+      <version>${awss3.sdk.version}</version>
     </dependency>
 ```
 
-* applcation.yml 설정 
-
-```text
-cloud:
-  aws:
-    credentials:
-      accessKey: IAM 사용자 엑세스 키
-      secretKey: IAM 사용자 비밀 엑세스 키
-    s3:
-      bucket: 버킷 이름
-    region:
-      static: S3를 서비스할 region 명
-    stack:
-      auto: false
-```
-
-* bean 설명 
-
-```text
-  @Bean
-  public AmazonS3 amazonS3Client(AwsConfigure awsConfigure) {
-    return AmazonS3ClientBuilder.standard()
-      .withRegion(Regions.fromName(awsConfigure.getRegion()))//region을 설정
-      .withCredentials( //자격증명을 통해 S3 Client 가져오
-        new AWSStaticCredentialsProvider(
-          new BasicAWSCredentials( // 자격증명 객체
-            awsConfigure.getAccessKey(),
-            awsConfigure.getSecretKey())
-        )
-      )
-      .build();
-  }
-```
-
-* controller 작성 
-
-```text
-@PostMapping(path = "user/join", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
- public String join(
-    @RequestPart(required = false) MultipartFile file
-  ) throws Exception {
-	  
-	  
-	   .....
-	   s3Service.upload(file);
-	  //s3Client.upload 메소드는 null을 반환하지 않음
-  }  
-```
-
-* 객체 업로드 : S3 버킷 이름, 오브젝트 키 이, 파일 \( byte\) 필요  PutObjectRequest 객체를 이용하여 업로
-
-```text
- public String upload(File file) {
-    PutObjectRequest request = new PutObjectRequest(bucketName, file.getName(), file);
-    return executePut(request);
-  }
-  
-  private String executePut(PutObjectRequest request) {
-    amazonS3.putObject(request.withCannedAcl(CannedAccessControlList.PublicRead));
-    StringBuilder sb = new StringBuilder(url);
-    if (!url.endsWith("/"))
-      sb.append("/");
-    sb.append(bucketName);
-    sb.append("/");
-    sb.append(request.getKey());
-    return sb.toString();
-  }
-```
-
-* 객체 업로 조회 : S3 버킷 이름과 오브젝트 키 필요 
-
-```text
-1. amazonS3.getObject(request) 사용하여 조회 
-2. https://doc.s3.amazonaws.com/2006-03-01/AmazonS3.wsdl이라는 
-  URL에서 “doc”는 버킷의 이름이고 “2006-03-01/AmazonS3.wsdl”은 키로 조회 
-```
-
-{% embed url="https://docs.aws.amazon.com/ko\_kr/AmazonS3/latest/userguide/Welcome.html\#CoreConcepts" %}
 
 
-
-{% embed url="https://victorydntmd.tistory.com/334" %}
-
-{% embed url="https://devlog-wjdrbs96.tistory.com/323" %}
-
-
+[https://docs.aws.amazon.com/ko\_kr/AmazonS3/latest/userguide/Welcome.html\#CoreConcepts](https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/Welcome.html#CoreConcepts)
 
