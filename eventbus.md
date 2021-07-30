@@ -21,8 +21,8 @@ public class EventConfigure {
 .....
   // 사용할 Evenbus Bean 등
   @Bean(destroyMethod = "close")
-  public JoinEventListener joinEventListener(EventBus eventBus, NotificationService notificationService, KafkaTemplate kafkaTemplate) {
-    return new JoinEventListener(eventBus, notificationService, kafkaTemplate);
+  public JoinEventListener joinEventListener(EventBus eventBus) {
+    return new JoinEventListener(eventBus);
   }
 }
 ```
