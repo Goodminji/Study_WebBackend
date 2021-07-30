@@ -1,4 +1,2 @@
-# SOLID\#
-
-**OOP 원칙**
+# SOLID
 
