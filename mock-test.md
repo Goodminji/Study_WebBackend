@@ -115,6 +115,8 @@ public void MockMulipartFile테스()
 
 {% embed url="https://www.baeldung.com/spring-multipart-post-request-test" %}
 
+{% embed url="https://sun-22.tistory.com/94" %}
+
 
 
 [https://gaemi606.tistory.com/m/entry/JUnit5-multipartformdata-%EC%A0%84%EC%86%A1-%ED%85%8C%EC%8A%A4%ED%8A%B8-MockMultipartFile](https://gaemi606.tistory.com/m/entry/JUnit5-multipartformdata-%EC%A0%84%EC%86%A1-%ED%85%8C%EC%8A%A4%ED%8A%B8-MockMultipartFile)
