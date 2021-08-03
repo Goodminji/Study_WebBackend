@@ -1,4 +1,4 @@
-# Mock test\#
+# Mock test
 
 **Mockito란?**
 
@@ -81,6 +81,44 @@ class dd {
 ```
 
   
+2. MockMultipartFile
+
+MockMulipartFile은 MultipartFile 인터페이스를 상속받아 모의 구현한다. 멀티파트파일을 업로드하는 컨트롤러 테스트에 사용된다.
+
+* MultipartFile  컨트롤러에서 호출.
+
+```text
+@PostMapping(value = "", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+public ResponseEntity<?> uploadImage(@RequestPart(name = "image") MultipartFile image) throws IOException {
+```
+
+* MockMulipartFile 테스트 
+* multipart\(\)는 MockMultipartHttpServletRequestBuilder를생성한다. fileUpload\(\)는 더 이상 사용하지 않음
+
+```text
+@Test
+public void MockMulipartFile테스() 
+  throws Exception {
+    //MockMultipartFile(String name, String originalFilename, String contentType, InputStream contentStream)
+    MockMultipartFile file 
+      = new MockMultipartFile(
+        "image", 
+        "test.png", 
+        "image/png",
+        new FileInputStream("업로드 할 실제 파일 path 입력")
+      );
+   
+    mockMvc.perform(multipart("/upload").file(file))
+      .andExpect(status().isOk());
+}
+```
+
+{% embed url="https://www.baeldung.com/spring-multipart-post-request-test" %}
+
+
+
+[https://gaemi606.tistory.com/m/entry/JUnit5-multipartformdata-%EC%A0%84%EC%86%A1-%ED%85%8C%EC%8A%A4%ED%8A%B8-MockMultipartFile](https://gaemi606.tistory.com/m/entry/JUnit5-multipartformdata-%EC%A0%84%EC%86%A1-%ED%85%8C%EC%8A%A4%ED%8A%B8-MockMultipartFile)
+
   
 출처: [https://www.crocus.co.kr/1556?category=395790](https://www.crocus.co.kr/1556?category=395790) \[Crocus\]    [https://jdm.kr/blog/165](https://jdm.kr/blog/165)
 

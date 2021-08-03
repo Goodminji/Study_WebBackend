@@ -8,7 +8,7 @@
 * [Spring](spring.md)
 * [Spring boot](spring-boot.md)
 * [Spring batch](spring-batch.md)
-* [Mock test\#](mock-test.md)
+* [Mock test](mock-test.md)
 * [Builder patten](builder-patten.md)
 * [3-Tier 아키텍처](3-tier.md)
 * [Session](session.md)
