@@ -26,3 +26,7 @@ Application -&gt; Batch core \(jobLauncher,job,step\)-&gt; Batch infrastructure\
 
    7. Itemwriter : 청크 구조에서 사용되는 컴포넌트로 배치에서 데이터를 DB,file 등에 저장하기 위한 인터페이스
 
+
+
+[https://deeplify.dev/back-end/spring/batch-tutorial](https://deeplify.dev/back-end/spring/batch-tutorial)
+
