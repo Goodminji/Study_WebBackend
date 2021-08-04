@@ -1,6 +1,6 @@
 # HandlerMethodArgumentResolver - paging
 
-### HandlerMethodArgumentResolver 이용.
+HandlerMethodArgumentResolver 이용.
 
 HandlerMethodArgumentResolver 인터페이스의 역할은 컨트롤러에서 파라미터를 바인딩 해주는 역할을 한다. 예를 들어 특정 클래스나 특정 어노테이션등의 요청 파라미터를 수정해야하거나, 또는 클래스의 파라미터를 조작 혹은 공통적으로 써야하는 파라미터들을 바인딩 해주는 역할이다.
 
@@ -9,7 +9,7 @@ HandlerMethodArgumentResolver 인터페이스의 역할은 컨트롤러에서 �
 
 
 
-### HandlerMethodArgumentResolver 설정
+HandlerMethodArgumentResolver 설정
 
 * 사용자의 요청이 Controller 가기 전에 HandlerMethodArgumentResolver 타서 그 요청에 대한 파라미터 수정해준다.
 
@@ -80,9 +80,7 @@ public class WebMvcConfigure implements WebMvcConfigurer {
      LIMIT ? OFFSET ?"
 ```
 
-출처
+출처 : [https://jhkang-tech.tistory.com/49](https://jhkang-tech.tistory.com/49)
 
-[https://jhkang-tech.tistory.com/49](https://jhkang-tech.tistory.com/49)
-
-[https://starkying.tistory.com/entry/Spring-MVC-—-HandlerMethodArgumentResolver-사용하기](https://starkying.tistory.com/entry/Spring-MVC-%E2%80%94-HandlerMethodArgumentResolver-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0) \[Random Access Memories\]
+출처: [https://starkying.tistory.com/entry/Spring-MVC-—-HandlerMethodArgumentResolver-사용하기](https://starkying.tistory.com/entry/Spring-MVC-%E2%80%94-HandlerMethodArgumentResolver-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0) \[Random Access Memories\]
 
