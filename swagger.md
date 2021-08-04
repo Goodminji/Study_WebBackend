@@ -5,14 +5,14 @@
 * 어노테이션 기반 REST API 문서 자동화
 * url: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
-1. 어노테이션
+### 1. 어노테이션
 
 * @Api : controller 단위로 Rest Api 메타데이터 명시
 * @ApiOperation : 하나의 rest api 요청 url에 매핑되며 문서화 대상으로 처리 됨
 * @apiParam, @apilmplicitParma – Rest api 호출시 전달되는 파라미터에 대한 설명
 *  @ apimodelProperty – model class 필드에 대한 설명
 
-   2. 설정 방법
+### 2. 설정 방법
 
 * pom.xml 추가 
 
