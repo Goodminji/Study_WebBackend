@@ -4,9 +4,9 @@ description: 비동기 처리 방법
 
 # CompletableFuture
 
-CompletableFuture 비동기 처리. 
+### CompletableFuture 비동기 처리. 
 
-대표 함수 
+### 대표 함수 
 
 1. CompletableFuture.supplyAsync : 반환 값이 필요할
 
@@ -61,13 +61,13 @@ CompletableFuture.supplyAsync(()->{
   });
 ```
 
+출처 
 
+[https://brunch.co.kr/@springboot/267](https://brunch.co.kr/@springboot/267)
 
-{% embed url="https://brunch.co.kr/@springboot/267" %}
+[https://www.hungrydiver.co.kr/bbs/detail/develop?id=2](https://www.hungrydiver.co.kr/bbs/detail/develop?id=2)
 
-{% embed url="https://www.hungrydiver.co.kr/bbs/detail/develop?id=2" %}
-
-{% embed url="https://m.blog.naver.com/2feelus/220714398973" %}
+[https://m.blog.naver.com/2feelus/220714398973](https://m.blog.naver.com/2feelus/220714398973)
 
 
 

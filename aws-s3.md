@@ -1,6 +1,6 @@
 # AWS S3
 
-### 1. 개념 
+1. 개념 
 
 * 단순한 웹 서비스 인터페이스를 사용하여 언제든지 웹상 어디서나 원하는 양의 데이터를 저장하고 검색.
 * 버킷에 데이터를 무한정으로 저장. Amazon S3 버킷에 객체를 원하는 만큼 업로드할 수 있으며, 각 객체에 최대 5TB의 데이터를 포. 각 객체는 고유한 개발자 할당 키를 사용하여 저장 및 검색. 
@@ -11,7 +11,7 @@
 *  `https://doc.s3.amazonaws.com/2006-03-01/AmazonS3.wsdl`이라는 URL에서 “`doc`”는 버킷의 이름이고 “`2006-03-01/AmazonS3.wsdl`”은 키
 * AWS S3연동은 Network I/O Bound 처리 이기 때문에 언제든 예외가 발생할 수 있음을 고려 해야 한다. 
 
-### 2. AWS 사용
+2. AWS 사용
 
 * pom.xml 등록 
 
@@ -100,11 +100,13 @@ cloud:
   URL에서 “doc”는 버킷의 이름이고 “2006-03-01/AmazonS3.wsdl”은 키로 조회 
 ```
 
-출처 
+{% embed url="https://docs.aws.amazon.com/ko\_kr/AmazonS3/latest/userguide/Welcome.html\#CoreConcepts" %}
 
-[https://docs.aws.amazon.com/ko\_kr/AmazonS3/latest/userguide/Welcome.html\#CoreConcepts](https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/Welcome.html#CoreConcepts)
 
-[https://victorydntmd.tistory.com/334](https://victorydntmd.tistory.com/334)
 
-[https://devlog-wjdrbs96.tistory.com/323](https://devlog-wjdrbs96.tistory.com/323)
+{% embed url="https://victorydntmd.tistory.com/334" %}
+
+{% embed url="https://devlog-wjdrbs96.tistory.com/323" %}
+
+
 
