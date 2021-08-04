@@ -1,6 +1,6 @@
 # Session
 
-### Session 기반 인증
+Session 기반 인증
 
 * HTTP는 무상태 프로토콜이고 어떤 정보도 저장하지 않음
 * 클라이언트는 HTTP 요청에 session-id를 포함시켜 서버가 클라이언트를 식별.
@@ -11,7 +11,7 @@
 * [https://mohwaproject.tistory.com/entry/HTTP-Session-%EC%9D%B4%EB%9E%80](https://mohwaproject.tistory.com/entry/HTTP-Session-%EC%9D%B4%EB%9E%80)
 * [https://jins-dev.tistory.com/entry/Session-%EA%B8%B0%EB%B0%98-%EC%9D%B8%EC%A6%9D%EA%B3%BC-Token-%EA%B8%B0%EB%B0%98-%EC%9D%B8%EC%A6%9D](https://jins-dev.tistory.com/entry/Session-%EA%B8%B0%EB%B0%98-%EC%9D%B8%EC%A6%9D%EA%B3%BC-Token-%EA%B8%B0%EB%B0%98-%EC%9D%B8%EC%A6%9D)
 
-### Session Cluster
+Session Cluster
 
 * 조회 속도와 안정성을 위해 보통 In-Memory 분산 데이터베이스 사용
 * 세션 공유 
