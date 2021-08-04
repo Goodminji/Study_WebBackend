@@ -2,7 +2,7 @@
 
 EventBus는 이벤트를 처리할 각 이벤트 리스너를 등록하고 각 리스너에게 이벤트를 전파하는 역할을 수행한다.
 
-### 1.eventBus pom.xml 등
+1. eventBus pom.xml 등
 
 ```text
   <dependency>
@@ -12,7 +12,7 @@ EventBus는 이벤트를 처리할 각 이벤트 리스너를 등록하고 각 �
     </dependency>
 ```
 
-### 2. eventBus bean 등록 
+2. eventBus bean 등
 
 ```text
 @Configuration
@@ -27,7 +27,7 @@ public class EventConfigure {
 }
 ```
 
-### 3. 이벤트 리스너 생성 및 등록
+3. 이벤트 리스너 생성 및 등록
 
 이벤트 리스너는 이벤트를 받아 처리하는 객체다. 이벤트를 처리하는 메서드를  구현하고\(JoinEventListener.java\)  **@Subscibe \(com.google.common.eventbus.Subscribe\)** 어노테이션을 달아주면 해당 메서드가 이벤트 핸들러 메서드의 역할을 하게된다.
 
@@ -55,7 +55,7 @@ public class JoinEventListener implements AutoCloseable {
 }
 ```
 
-### 4. 이벤트 발행
+4. 이벤트 발행
 
 * EventBus의 post\(\) 메서드로 이벤트를 발행할 수 있다. 이벤트 버스에 이벤트를 발행하면 해당 이벤트를 구독하고 있는 이벤트 리스너에서 이벤트를 받아 처리하게 된다
 
@@ -67,7 +67,7 @@ public void postEvent() {
 }
 ```
 
-출처  
+{% embed url="https://developer-youngjun.tistory.com/17" %}
 
-[https://developer-youngjun.tistory.com/17](https://developer-youngjun.tistory.com/17) 
+
 
