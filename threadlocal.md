@@ -1,10 +1,10 @@
 # ThreadLocal
 
-쓰레드란 ? 한 프로세스 내에서 동작 되는 여러 실행 흐름 
+### 쓰레드란 ? 한 프로세스 내에서 동작 되는 여러 실행 흐름 
 
 
 
-ThreadLocal 이란?
+### ThreadLocal 이란?
 
 * ThreadLocal class 는 오직 한 쓰레드에 의해서 읽고 쓰여질 수 있는 **변수**
 * 두 쓰레드가 같은 코드를 실행하고 이 코드가 하나의ThreadLocal 변수를 참조 하더라도 서로의 ThreadLocal 변수를 볼 수 없다.
