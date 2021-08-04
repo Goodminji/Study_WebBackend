@@ -1,6 +1,6 @@
 # Swagger
 
-Swagger
+## Swagger
 
 * 어노테이션 기반 REST API 문서 자동화
 * url: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
@@ -80,9 +80,9 @@ public class UserDto {
 
 ```
 
+출처
 
-
-{% embed url="https://yookeun.github.io/java/2017/02/26/java-swagger/" %}
+[https://yookeun.github.io/java/2017/02/26/java-swagger/](https://yookeun.github.io/java/2017/02/26/java-swagger/)
 
 
 
