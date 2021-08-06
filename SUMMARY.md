@@ -2,9 +2,9 @@
 
 * [WebBackend](README.md)
 * [JAVA](java.md)
-* [JWT\(JSON WEB TOKEN\)](jwt-json-web-token.md)
+* [JWT\(JSON WEB TOKEN\)](jwt.md)
 * [DTO/ENTITY/VO](dto-entity-vo.md)
-* [SOLID\#](solid.md)
+* [SOLID](solid.md)
 * [Spring](spring.md)
 * [Spring boot](spring-boot.md)
 * [Spring batch](spring-batch.md)

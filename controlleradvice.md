@@ -1,6 +1,6 @@
 # ControllerAdvice
 
-ControllerAdvice 
+### ControllerAdvice 
 
 * Controller 대상으로 공통 코드를 작성 할수 있게 도와주는 AOP 어노테이션
 * controller에서 throw 하는 예외에 대해 공통 처리를 수행하기 좋은 포인트
